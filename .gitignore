@@ -1,34 +1,28 @@
+# --- IntelliJ IDEA 专属配置 ---
+.idea/           # IDEA 核心配置目录
+*.iml            # 模块配置文件
+*.ipr            # 旧版项目文件（可选）
+*.iws            # 旧版工作区文件（可选）
+workspace.xml    # 动态工作区设置（建议忽略，避免团队冲突）
+
 # --- 编译输出 ---
-*.class          # 忽略所有 class 文件
-/bin/            # Eclipse 默认输出目录
-/out/            # IntelliJ IDEA 默认输出目录
-/target/         # Maven/Gradle 构建目录
-*.jar            # 可执行 JAR 文件
-*.war            # Web 应用包
-*.ear            # 企业应用包
+out/             # IDEA 默认编译输出目录
+bin/             # 手动设置的输出目录
+target/          # Maven/Gradle 构建目录
+*.jar
+*.war
+*.ear
 
-# --- IDE 配置 ---
-.idea/           # IntelliJ IDEA 配置
-*.iml            # IntelliJ IDEA 模块文件
-*.hprof          # Java 堆转储文件
-.vscode/         # VS Code 配置
-.project         # Eclipse 项目文件
-.classpath
-.settings/
-
-# --- 构建工具 ---
-.gradle/         # Gradle 缓存目录
-build/           # Gradle 构建输出
-.mvn/wrapper/    # Maven Wrapper 文件
-
-# --- 日志与临时文件 ---
-*.log            # 通用日志文件
+# --- 缓存与临时文件 ---
+*.hprof          # 堆转储文件
+*.log            # IDEA 日志（如 idea.log）
 *.tmp            # 临时文件
-*.cache          
-hs_err_pid*      # JVM 崩溃日志
+*.cache
 
-# --- 操作系统生成文件 ---
-.DS_Store        # macOS 目录属性文件
-Thumbs.db        # Windows 缩略图缓存
-*.swp            # Vim 临时文件
-*.swo
+# --- 版本控制系统相关 ---
+.shelf/          # IDEA 本地变更暂存目录
+
+# --- 其他通用项 ---
+.DS_Store        # macOS
+Thumbs.db        # Windows
+*.swp            # Vim
